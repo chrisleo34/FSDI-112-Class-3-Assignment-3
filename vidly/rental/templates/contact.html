@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+
+<link rel="stylesheet" href="/static/css/layout.css">
+
+
+{% block content%}
+<div class="container">
+  <div style="text-align: center;" class="jumbotron">
+    <h1>Contact us</h1>
+    <p style="font-family: Mali, cursive;">Vidly staff will respond in 1-2 business days</p>
+  </div>
+
+  <div class="form-area card card-body">
+    <form role="form" method="POST">
+      {% csrf_token %}
+      <input type="text" class="form-control card-body" id="subject" name="subject" placeholder="Subject" maxlength="70"
+        required>
+  </div>
+  <br>
+  <div class="form-group card-body">
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="form-group card-body">
+    <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="300"
+      rows="7"></textarea>
+  </div>
+
+  <button type="submit" name="submit" class="btn btn-s btn-secondary "
+    style="font-family: Mali, cursive; margin: 15px; margin-right: 15px;">Submit</button>
+  </form>
+  {% endblock %}
+  
+  <!--IMAGE CAROSEL-->
+  <div id="carouselExampleSlidesOnly" class="carousel slide d-block mx-auto" style="
+          font-family: Mali, cursive;
+          margin: 20px;
+          margin-left: 200px;
+          margin-bottom: 10px;
+          justify-items: center;
+          justify-content: center;
+        " data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-150" src="../static/images/ACTION.jpg" alt="First slide" />
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-150" src="../static/images/ALADDIN.jpg" alt="Second slide" />
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-150" src="../static/images/CONAN.jpg" alt="Third slide" />
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-150" src="../static/images/EXTRACTION.jpg" alt="Fifth slide" />
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-150" src="../static/images/HANGOVER II.jpg" alt="Seventh slide" />
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-150" src="../static/images/MARVEL.jpg" alt="Eighth slide" />
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-150" src="../static/images/saw4poster.jpg" alt="Ninth slide" />
+      </div>
+    </div>
+  </div>
+  <!--image carosel END-->
+  
+  <br />
+  
+  <br />
